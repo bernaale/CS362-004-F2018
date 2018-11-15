@@ -72,23 +72,29 @@ default: unittestresults.out
 
 unittestresults.out: betterTestDrawCard randomtestcard1 randomtestcard2 randomtestadventurer unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 dominion.c rngs.o
 
+randomtestcard1.out: randomtestcard1 dominion.c rngs.o
+
+randomtestcard2.out: randomtestcard2 dominion.c rngs.o
+
+randomtestadventurer: randomtestadventurer dominion.c rngs.o
+
 	echo "Result for running Dominion tests:" > unittestresults.out
 	
 	echo "betterTestDrawCard.c:" >> unittestresults.out
 	./betterTestDrawCard >> unittestresults.out
 	gcov -f dominion.c >> unittestresults.out
 	
-	echo "randomtestcard1.c:" >> unittestresults.out
-	./randomtestcard1 >> unittestresults.out
-	gcov -f dominion.c >> unittestresults.out
+	echo "randomtestcard1.c:" >> randomtestcard1.out
+	./randomtestcard1 >> randomtestcard1.out
+	gcov -f dominion.c >> randomtestcard1.out
 
-	echo "randomtestcard2.c:" >> unittestresults.out
-	./randomtestcard2 >> unittestresults.out
-	gcov -f dominion.c >> unittestresults.out
+	echo "randomtestcard2.c:" >> randomtestcard2.out
+	./randomtestcard2 >> randomtestcard2.out
+	gcov -f dominion.c >> randomtestcard2.out
 
-	echo "randomtestadventurer.c:" >> unittestresults.out
-	./randomtestadventurer >> unittestresults.out
-	gcov -f dominion.c >> unittestresults.out
+	echo "randomtestadventurer.c:" >> randomtestadventurer.out
+	./randomtestadventurer >> randomtestadventurer.out
+	gcov -f dominion.c >> randomtestadventurer.out
 
 	echo "unittest1.c:" >> unittestresults.out
 	./unittest1 >> unittestresults.out

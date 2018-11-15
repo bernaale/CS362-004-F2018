@@ -1,8 +1,8 @@
-Result for running Dominion tests:
-betterTestDrawCard.c:
-Testing drawCard.
-RANDOM TESTS.
-ALL TESTS OK
+randomtestcard1.c:
+Testing Gardens card.
+The Gardens card's function is tested
+against random positive numbers.
+Garden card is working!
 Function 'updateCoins'
 Lines executed:0.00% of 11
 
@@ -25,7 +25,7 @@ Function 'smithyFunction'
 Lines executed:0.00% of 5
 
 Function 'gardensFunction'
-Lines executed:0.00% of 2
+Lines executed:100.00% of 2
 
 Function 'adventurerFunction'
 Lines executed:0.00% of 15
@@ -85,6 +85,6 @@ Function 'compare'
 Lines executed:83.33% of 6
 
 File 'dominion.c'
-Lines executed:7.35% of 558
+Lines executed:7.71% of 558
 Creating 'dominion.c.gcov'
 
