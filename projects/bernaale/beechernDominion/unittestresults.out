@@ -1,0 +1,131 @@
+Result for running Dominion tests:
+unittest1.c:
+
+Testing getCost():
+The 1th enum from CARD had the correct cost.
+The 2th enum from CARD had the correct cost.
+The 3th enum from CARD had the correct cost.
+The 4th enum from CARD had the correct cost.
+The 5th enum from CARD had the correct cost.
+The 6th enum from CARD had the correct cost.
+The 7th enum from CARD had the correct cost.
+The 8th enum from CARD had the correct cost.
+The 9th enum from CARD had the correct cost.
+The 10th enum from CARD had the correct cost.
+The 11th enum from CARD had the correct cost.
+The 12th enum from CARD had the correct cost.
+The 13th enum from CARD had the correct cost.
+The 14th enum from CARD had the correct cost.
+The 15th enum from CARD had the correct cost.
+The 16th enum from CARD had the correct cost.
+The 17th enum from CARD had the correct cost.
+The 18th enum from CARD had the correct cost.
+The 19th enum from CARD had the correct cost.
+The 20th enum from CARD had the correct cost.
+The 21th enum from CARD had the correct cost.
+The 22th enum from CARD had the correct cost.
+The 23th enum from CARD had the correct cost.
+The 24th enum from CARD had the correct cost.
+The 25th enum from CARD had the correct cost.
+The 26th enum from CARD had the correct cost.
+The 27th enum from CARD had the correct cost.
+The null case returns the correct value.
+File 'dominion.c'
+Lines executed:5.47% of 548
+Creating 'dominion.c.gcov'
+
+unittest2.c:
+
+Testing isGameOver():
+isGameOver() working when provinces depleted.
+isGameOver() working when provinces > 0 but 3 empty supply piles.
+isGameOver() working when province > 0 and 2 empty supply piles.
+File 'dominion.c'
+Lines executed:23.54% of 548
+Creating 'dominion.c.gcov'
+
+unittest3.c:
+
+Testing supplyCount():
+supplyCount() is accurately retrieving the 1th enum CARD supply value.
+supplyCount() is accurately retrieving the 2th enum CARD supply value.
+supplyCount() is accurately retrieving the 3th enum CARD supply value.
+supplyCount() is accurately retrieving the 4th enum CARD supply value.
+supplyCount() is accurately retrieving the 5th enum CARD supply value.
+supplyCount() is accurately retrieving the 6th enum CARD supply value.
+supplyCount() is accurately retrieving the 7th enum CARD supply value.
+supplyCount() is accurately retrieving the 8th enum CARD supply value.
+supplyCount() is accurately retrieving the 9th enum CARD supply value.
+supplyCount() is accurately retrieving the 10th enum CARD supply value.
+supplyCount() is accurately retrieving the 11th enum CARD supply value.
+supplyCount() is accurately retrieving the 12th enum CARD supply value.
+supplyCount() is accurately retrieving the 13th enum CARD supply value.
+supplyCount() is accurately retrieving the 14th enum CARD supply value.
+supplyCount() is accurately retrieving the 15th enum CARD supply value.
+supplyCount() is accurately retrieving the 16th enum CARD supply value.
+supplyCount() is accurately retrieving the 17th enum CARD supply value.
+supplyCount() is accurately retrieving the 18th enum CARD supply value.
+supplyCount() is accurately retrieving the 19th enum CARD supply value.
+supplyCount() is accurately retrieving the 20th enum CARD supply value.
+supplyCount() is accurately retrieving the 21th enum CARD supply value.
+supplyCount() is accurately retrieving the 22th enum CARD supply value.
+supplyCount() is accurately retrieving the 23th enum CARD supply value.
+supplyCount() is accurately retrieving the 24th enum CARD supply value.
+supplyCount() is accurately retrieving the 25th enum CARD supply value.
+supplyCount() is accurately retrieving the 26th enum CARD supply value.
+supplyCount() is accurately retrieving the 27th enum CARD supply value.
+File 'dominion.c'
+Lines executed:23.91% of 548
+Creating 'dominion.c.gcov'
+
+unittest4.c:
+
+Testing numHandCards():
+numHandCards() is working.
+File 'dominion.c'
+Lines executed:24.64% of 548
+Creating 'dominion.c.gcov'
+
+cardtest1.c:
+
+Testing the gardens card:
+Gardens card returning -1 as expected.
+File 'dominion.c'
+Lines executed:26.28% of 548
+Creating 'dominion.c.gcov'
+
+cardtest2.c:
+
+Testing the outpost card:
+Outpost flag correctly incremented.
+ERROR: Outpost card not discarded.
+first played card was 4 and outpost is 23
+File 'dominion.c'
+Lines executed:28.83% of 548
+Creating 'dominion.c.gcov'
+
+cardtest3.c:
+
+Testing the smithy card:
+3 cards successfully given to player from smithy.
+User deck has three cards gone from smithy.
+Other player not effected by smithy.
+Victory cards the same before and after smithy.
+Kingdom card count has not changed after smithy.
+File 'dominion.c'
+Lines executed:29.56% of 548
+Creating 'dominion.c.gcov'
+
+cardtest4.c:
+
+Testing the adventurer card:
+3 cards successfully given to player from adventurer.
+ERROR: Player's deck not down by three from adventurer.
+beforeNumDeck is 5 and after is 3.
+Other player not effected by adventurer.
+Victory cards the same before and after adventurer.
+Kingdom card count has not changed after adventurer.
+File 'dominion.c'
+Lines executed:31.02% of 548
+Creating 'dominion.c.gcov'
+
