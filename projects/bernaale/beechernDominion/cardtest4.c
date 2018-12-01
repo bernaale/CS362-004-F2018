@@ -23,16 +23,16 @@ int main() {
 	initializeGame(numPlayer, kCards, seed, &GS);
 	
 	// 1.
-	//first we'll see if the player received three cards by comparing 
-	//the number of cards they have before and after smithy
+	//first we'll see if the player received two treasure cards by comparing 
+	//the number of cards they have before and after adventurer
 	int currplayer = whoseTurn(&GS);
 	int beforeNum = GS.handCount[currplayer];
 	cardEffect(adventurer, z, e, r, &GS, o, &s); //outpostPlayed should be 1
 	if ((beforeNum+2) == GS.handCount[currplayer]) {//add 2 because gain three & discarded smithy
-                printf("3 cards successfully given to player from adventurer.\n");
+                printf("2 treasure cards successfully given to player from adventurer.\n");
         } else {
         	#if (OUTPUT == 1)
-        	printf("ERROR: Player cards did not increase by 3 after adventurer.\n");
+        	printf("ERROR: Player cards did not increase by 2 after adventurer.\n");
         	printf("beforeNum is %d and after is %d.\n", beforeNum, GS.handCount[currplayer]);
 		#endif
 	}
@@ -46,11 +46,11 @@ int main() {
 	currplayer = whoseTurn(&GS);
         int beforeNumDeck = GS.deckCount[currplayer];
         cardEffect(adventurer, z, e, r, &GS, o, &s); //outpostPlayed should be 1
-        if ((beforeNumDeck-3) == GS.deckCount[currplayer]) {//should be same
-                printf("User deck has three cards gone from adventurer.\n");
+        if ((beforeNumDeck-2) == GS.deckCount[currplayer]) {//should be same
+                printf("User deck has two cards gone from adventurer.\n");
         } else {
                 #if (OUTPUT == 1)
-                printf("ERROR: Player's deck not down by three from adventurer.\n");
+                printf("ERROR: Player's deck not down by two from adventurer.\n");
                 printf("beforeNumDeck is %d and after is %d.\n", beforeNumDeck, GS.deckCount[currplayer]);
                 #endif
         }
@@ -86,36 +86,17 @@ int main() {
 	
 	//similar to before we'll check the before and after piles
 	//Victory
-	int estates = GS.supplyCount[estate];
-	int duchies = GS.supplyCount[duchy];
-	int provinces = GS.supplyCount[province];
-	int sumKCards = 0;
-	for (int i = 0; i < 10; i++) {
-		sumKCards = sumKCards + GS.supplyCount[kCards[i]];
-	}
+	int copper = GS.supplyCount[copper];
+	int silver = GS.supplyCount[silver];
+	int gold = GS.supplyCount[gold];
+	int sumCoins = 0;
+	sumCoins = copper + silver + gold;
 	
 	cardEffect(adventurer, z, e, r, &GS, o, &s); //outpostPlayed should be 1
-	if ((GS.supplyCount[estate] == estates) &&
-	     (GS.supplyCount[duchy] == duchies) &&
-	      (GS.supplyCount[province] == provinces)) {//should be same
-		printf("Victory cards the same before and after adventurer.\n");
-	} else {
-	        #if (OUTPUT == 1)
-		printf("ERROR: Victory card count changed by adventurer.\n");
-		printf("beforeNum is %d and after is %d.\n", estates, GS.supplyCount[estate]);
-	        #endif
-	}
-	int sumKCardsAfter = 0;
-	for (int i = 0; i < 10; i++) {
-		sumKCardsAfter = sumKCardsAfter + GS.supplyCount[kCards[i]];
-	}
-	if (sumKCards == sumKCardsAfter) {
-		printf("Kingdom card count has not changed after adventurer.\n");
-	} else {
-		#if (OUTPUT == 1)
-		printf("ERROR: Kingdom card count has changed after adventurer.\n");
-		printf("sumKCards is %d and sumKCardsAfter is %d.\n", sumKCards, sumKCardsAfter);
-		#endif
-	}
+	printf("Coins before adventurer: %d\n", sumCoins);
+	printf("Coins after adventurer: %d\n", GS.supplyCount[copper]+
+						GS.supplyCount[silver]+
+						GS.supplyCount[gold]);
+	
 	return 0;
 }

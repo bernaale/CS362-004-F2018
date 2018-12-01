@@ -119,12 +119,11 @@ Creating 'dominion.c.gcov'
 cardtest4.c:
 
 Testing the adventurer card:
-3 cards successfully given to player from adventurer.
-ERROR: Player's deck not down by three from adventurer.
-beforeNumDeck is 5 and after is 3.
+2 treasure cards successfully given to player from adventurer.
+User deck has two cards gone from adventurer.
 Other player not effected by adventurer.
-Victory cards the same before and after adventurer.
-Kingdom card count has not changed after adventurer.
+Coins before adventurer: 30
+Coins after adventurer: 24
 File 'dominion.c'
 Lines executed:31.02% of 548
 Creating 'dominion.c.gcov'
